@@ -1,0 +1,17 @@
+baseURL = 'https://JasonJNelson.github.io/las-vegas-crime-watcher-hugo/'
+languageCode = 'en-us'
+title = 'Vegas Crime Watcher'
+enableRobotsTXT = true
+
+[params]
+  description = 'Live-style Las Vegas crime map and incident feed. Interactive map, real-time style updates, neighborhood alerts, and subscription tiers.'
+  author = 'Jason J. Nelson'
+  live = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ['HTML']
