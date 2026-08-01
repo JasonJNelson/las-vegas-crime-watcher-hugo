@@ -1,0 +1,17 @@
+{{ define "title" }}{{ .Site.Title }} | Live Las Vegas Crime Map & Feed{{ end }}
+
+{{ define "main" }}
+  {{ partial "stats.html" . }}
+
+  <div class="main">
+    <section class="map-section">
+      {{ partial "map.html" . }}
+    </section>
+
+    <aside class="sidebar">
+      {{ partial "feed.html" . }}
+    </aside>
+  </div>
+
+  {{ partial "pricing.html" . }}
+{{ end }}
