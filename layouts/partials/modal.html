@@ -1,0 +1,30 @@
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this) closeModal()">
+  <div class="modal" id="modal">
+    <h3 id="modalTitle">Log In</h3>
+    <p id="modalDesc">Access your alerts and saved neighborhoods.</p>
+    <form id="authForm" onsubmit="handleAuth(event)">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="you@email.com" />
+      </div>
+      <div class="form-group" id="passwordGroup">
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="••••••••" />
+      </div>
+      <div class="form-group" id="planGroup" style="display:none">
+        <label for="plan">Plan</label>
+        <select id="plan" style="width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:0.7rem;color:var(--text);font-family:inherit">
+          <option value="pro">Neighborhood Pro — $9.99/mo</option>
+          <option value="business">Business / Fleet — $29.99/mo</option>
+        </select>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="modalSubmit">Log In</button>
+      </div>
+    </form>
+    <div class="auth-toggle" id="authToggle">
+      Don’t have an account? <a onclick="switchToSignup()">Sign up</a>
+    </div>
+  </div>
+</div>
