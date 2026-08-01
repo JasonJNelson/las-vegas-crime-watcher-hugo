@@ -1,0 +1,14 @@
+<header>
+  <div class="logo">
+    <div class="logo-icon">🚨</div>
+    <span>{{ .Site.Title }}</span>
+    {{ if .Site.Params.live }}
+    <span class="live-badge"><span class="live-dot"></span> Live</span>
+    {{ end }}
+  </div>
+  <nav>
+    <button class="btn btn-ghost" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Pricing</button>
+    <button class="btn btn-outline" id="loginBtn" onclick="openModal('login')">Log In</button>
+    <button class="btn btn-primary" id="subBtn" onclick="openModal('subscribe')">Subscribe</button>
+  </nav>
+</header>
